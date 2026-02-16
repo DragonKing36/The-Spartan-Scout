@@ -7,7 +7,6 @@ library(shiny.destroy)
 library(rclipboard)
 library(tippy)
 library(tidyverse)
-library(gargle)
 
 #Pre-Defines----
 emailAddress <- Sys.getenv("emailAddress")
@@ -16,9 +15,9 @@ driveFolder <- Sys.getenv("driveFolder")
 pitFolder <- Sys.getenv("pitFolder")
 
 
-options(gargle_oauth_email = emailAddress)
 
-token_fetch(scopes = "https://www.googleapis.com/auth/drive")
+drive_auth(
+  email = emailAddress)
 
 
 board <- board_gdrive(googledrive::as_id(drivelink),versioned = FALSE)
