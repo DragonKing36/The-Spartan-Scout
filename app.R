@@ -17,7 +17,7 @@ pitFolder <- Sys.getenv("pitFolder")
 
 
 drive_auth(
-  email = emailAddress)
+  token = Sys.getenv("HashToken")
 
 
 board <- board_gdrive(googledrive::as_id(drivelink),versioned = FALSE)
