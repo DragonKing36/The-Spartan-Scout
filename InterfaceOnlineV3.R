@@ -9,10 +9,10 @@ library(tippy)
 library(tidyverse)
 
 #Pre-Defines----
-emailAddress <- "997scouting@gmail.com"
-drivelink <- "https://drive.google.com/drive/u/3/folders/1pfryVsR8apeBKy7fPIINHXl2DouXJZvl"
-driveFolder <- "2026ConfigData"
-pitFolder <- "2026PitScoutingData"
+emailAddress <- Sys.getenv("emailAddress")
+drivelink <- Sys.getenv("drivelink")
+driveFolder <- Sys.getenv("driveFolder")
+pitFolder <- Sys.getenv("pitFolder")
 
 
 
