@@ -7,6 +7,7 @@ library(shiny.destroy)
 library(rclipboard)
 library(tippy)
 library(tidyverse)
+library(gargle)
 
 #Pre-Defines----
 emailAddress <- Sys.getenv("emailAddress")
