@@ -15,9 +15,9 @@ driveFolder <- Sys.getenv("driveFolder")
 pitFolder <- Sys.getenv("pitFolder")
 
 
+options(gargle_oauth_email = emailAddress)
 
-drive_auth(
-  email = emailAddress)
+token_fetch(scopes = "https://www.googleapis.com/auth/drive")
 
 
 board <- board_gdrive(googledrive::as_id(drivelink),versioned = FALSE)
