@@ -20,7 +20,7 @@ drive_auth(
   token = Sys.getenv("HashToken")
 
 
-board <- board_gdrive(googledrive::as_id(drivelink),versioned = FALSE)
+OutputPoint <- board_gdrive(googledrive::as_id(drivelink),versioned = FALSE)
 
 Match_Matrix <- read_csv(drive_read_string(file = as_id((drive_ls(paste("~/",driveFolder,sep = "")) %>% filter(name == "Match_Schedule.csv"))$id)))
 Match_Matrix <- Match_Matrix[,c('match_number','red1','red2','red3','blue1','blue2','blue3')]
@@ -368,7 +368,7 @@ InterfaceServer <- function(input, output, session){
     
     file_name=paste("Match",TrueMatch(),"Team",TrueTeam(),sep = "_")
     
-    board %>% pin_write(name = file_name, x = output_data(), type = "csv")
+    OutputPoint %>% pin_write(name = file_name, x = output_data(), type = "csv")
     
     showModal(modalDialog(
       title = "Submission Successful",
