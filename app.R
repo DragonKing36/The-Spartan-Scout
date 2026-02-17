@@ -14,7 +14,7 @@ drivelink <- Sys.getenv("drivelink")
 driveFolder <- Sys.getenv("driveFolder")
 pitFolder <- Sys.getenv("pitFolder")
 
-
+print(emailAddress)
 
 drive_auth(
   token = Sys.getenv("HashToken")
