@@ -16,7 +16,7 @@ pitFolder <- Sys.getenv("pitFolder")
 
 print(emailAddress)
 
-options(gargle_quiet = FALSE)
+options(gargle_verbosity = 'debug')
 
 drive_auth(
   email = emailAddress,
