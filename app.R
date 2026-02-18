@@ -17,7 +17,8 @@ pitFolder <- Sys.getenv("pitFolder")
 print(emailAddress)
 
 drive_auth(
-  token = Sys.getenv("HashToken")
+  email = emailAddress,
+  use_oob = TRUE
   )
 
 
