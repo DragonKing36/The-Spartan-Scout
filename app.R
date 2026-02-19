@@ -19,8 +19,7 @@ print(emailAddress)
 options(gargle_verbosity = 'debug')
 
 drive_auth(
-  email = emailAddress,
-  use_oob = TRUE
+  token <- Sys.getenv("HashToken")
   )
 
 
